@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Sen', sans-serif;
+}
+
+.header {
+    min-height: 50px;
+    background-color: rgb(118, 178, 226);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+
+#logo {
+    float: left;
+    flex-shrink: 0;
+    margin: auto;
+    height: 50px;
+    width: 50px;
+    margin-left: 40px;
+}
+
+.menu-wrapper nav {
+    margin-right: 40px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 20px;
+    margin: 10px;
+}
+
+nav a:hover {
+    background: #a1ddff;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    margin: 60px;
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    margin: 50px 20px 50px 20px;
+    padding: 20px;
+}
+
+.box:hover {
+    box-shadow: 0 0 15px rgba(10, 10, 10, 0.541);
+}
+
+.outline-box {
+    border: 2px solid blue;
+}
+
+.solid-box {
+    background: red;
+}
+
+.diamond-box {
+    background: green;
+    transform: rotate(45deg);
+}
+
+.spinning-box {
+    background: rgba(4, 5, 5, 1.1);
+    opacity: 0.75;
+    animation: rotation 3s infinite linear;
+    animation-play-state: running;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(359deg);
+    }
+}
+
+.paused {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+
+.footer {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: rgb(118, 178, 226);
+    min-height: 50px;
+    position: fixed;
+    text-align: center;
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+}
+
+.footer-links ul li {
+    list-style-type: none;
+    color: #ffffff;
+    padding: 15px;
+}
+
+@media (max-width: 800px) {
+    .content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        overflow: hidden;
+        margin: 30px;
+    }
+    .box {
+        width: 200px;
+        height: 200px;
+        overflow: hidden;
+        margin: 30px 20px 30px 20px;
+        padding: 20px;
+    }
+}
